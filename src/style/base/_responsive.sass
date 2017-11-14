@@ -1,0 +1,40 @@
+$screen-small: 640px
+$screen-medium: 960px
+$screen-large: 1024px
+$screen-huge: 1920px
+
+=media-smallonly
+  @media (max-width: $screen-small)
+    @content
+=media-mediumonly
+  @media (min-width: $screen-small + 1px) and (max-width: $screen-medium)
+    @content
+=media-largeonly
+  @media (min-width: $screen-medium + 1px) and (max-width: $screen-large)
+    @content
+=media-hugeonly
+  @media (min-width: $screen-large + 1px) and (max-width: $screen-huge)
+    @content
+
+=media-smallup
+  @media (min-width: $screen-small + 1px)
+    @content
+=media-mediumup
+  @media (min-width: $screen-medium + 1px)
+    @content
+=media-largeup
+  @media (min-width: $screen-large + 1px)
+    @content
+=media-hugeup
+  @media (min-width: $screen-huge + 1px)
+    @content
+
+=media-mediumdown
+  @media (max-width: $screen-medium)
+    @content
+=media-largedown
+  @media (max-width: $screen-large)
+    @content
+=media-hugedown
+  @media (max-width: $screen-huge)
+    @content

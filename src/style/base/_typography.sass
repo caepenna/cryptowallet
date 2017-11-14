@@ -1,0 +1,48 @@
+html
+  font-variant-numeric: oldstyle-nums
+  font-feature-settings: "liga1" on
+  font-family: $font-family-body
+
+html,
+p,
+li,
+blockquote,
+pre
+  font-size: $font-size-deci
+  line-height: $line-height-centi
+  +media-mediumup
+    font-size: $font-size-base
+    line-height: $line-height-base
+
+h1,
+h2,
+h3
+  font-weight: 700
+  font-family: $font-family-headings
+
+h1
+  line-height: $line-height-deca
+  font-size: $font-size-hecto
+  +media-mediumup
+    line-height: $line-height-kilo
+    font-size: $font-size-kilo
+  * + &
+    margin-top: $space-kilo
+
+h2
+  line-height: $line-height-deci
+  font-size: $font-size-deca
+  +media-mediumup
+    line-height: $line-height-deca
+    font-size: $font-size-hecto
+  * + &
+    margin-top: $space-deca
+
+h3
+  line-height: $line-height-centi
+  font-size: $font-size-base
+  +media-mediumup
+    line-height: $line-height-base
+    font-size: $font-size-deca
+  * + &
+    margin-top: $space-base
