@@ -176,8 +176,7 @@ body > main {
   }
 }
 
-.section-purchase,
-.section-followup {
+body > main > section {
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -188,8 +187,7 @@ body > main {
 }
 
 @media (min-width: 961px) {
-  .section-purchase,
-  .section-followup {
+  body > main > section {
     padding: 1.5rem;
     min-height: 100%;
     width: 50%;
@@ -283,19 +281,22 @@ body > main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.section-followup {
+.section-marketcap {
   overflow: hidden;
   background-color: #f2f2f2;
   color: #1a1a1a;
+  text-align: center;
 }
 
-.section-followup > .title {
-  color: #bfbfbf;
+.section-marketcap > .title {
+  color: #cccccc;
 }
 
 .section-purchase {
+  overflow: hidden;
   background-color: #0d0d0d;
   color: #d9d9d9;
+  text-align: center;
 }
 
 .section-purchase > .title {
