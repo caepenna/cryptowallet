@@ -14,5 +14,42 @@ html
     link href="./style/style.css" rel="stylesheet" type='text/css'
 
   body
-    
-    h1 Hello, world!
+
+    main
+
+      section.section-purchase
+        h1 Buy some
+        h4 Chose a cryptocurrency to buy
+        select
+          option Rolecoin
+          option Bitcoin
+          option Memecoin
+          option 9coin
+        h4 How much? (in USD)
+        input type="text" placeholder="0.00"
+        h3 That will give you <em>0.00</em> Rolecoins.
+        button Purchase
+
+      section.section-followup
+        h1 Follow up
+        ul.coin-list
+          li.coin-item.-head
+            .name Cryptocurrency
+            .price Price (in USD)
+            .change Change (24h)
+          li.coin-item
+            .name Rolecoin
+            .price 7543.02
+            .change.-positive 1.45%
+          li.coin-item
+            .name Bitcoin
+            .price 6673.67
+            .change.-positive 12.13%
+          li.coin-item
+            .name Memecoin
+            .price 1310.73
+            .change.-negative -5.44%
+          li.coin-item
+            .name 9coin
+            .price 61.26
+            .change.-positive 3.02%

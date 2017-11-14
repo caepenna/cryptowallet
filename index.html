@@ -12,8 +12,99 @@
     <link href="./style/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>
-      Hello, world!
-    </h1>
+    <main>
+      <section class="section-purchase">
+        <h1>
+          Buy some
+        </h1>
+        <h4>
+          Chose a cryptocurrency to buy
+        </h4>
+        <select>
+          <option>
+            Rolecoin
+          </option>
+          <option>
+            Bitcoin
+          </option>
+          <option>
+            Memecoin
+          </option>
+          <option>
+            9coin
+          </option>
+        </select>
+        <h4>
+          How much? (in USD)
+        </h4>
+        <input placeholder="0.00" type="text" />
+        <h3>
+          That will give you <em>0.00</em> Rolecoins.
+        </h3>
+        <button>Purchase</button>
+      </section>
+      <section class="section-followup">
+        <h1>
+          Follow up
+        </h1>
+        <ul class="coin-list">
+          <li class="coin-item -head">
+            <div class="name">
+              Cryptocurrency
+            </div>
+            <div class="price">
+              Price (in USD)
+            </div>
+            <div class="change">
+              Change (24h)
+            </div>
+          </li>
+          <li class="coin-item">
+            <div class="name">
+              Rolecoin
+            </div>
+            <div class="price">
+              7543.02
+            </div>
+            <div class="change -positive">
+              1.45%
+            </div>
+          </li>
+          <li class="coin-item">
+            <div class="name">
+              Bitcoin
+            </div>
+            <div class="price">
+              6673.67
+            </div>
+            <div class="change -positive">
+              12.13%
+            </div>
+          </li>
+          <li class="coin-item">
+            <div class="name">
+              Memecoin
+            </div>
+            <div class="price">
+              1310.73
+            </div>
+            <div class="change -negative">
+              -5.44%
+            </div>
+          </li>
+          <li class="coin-item">
+            <div class="name">
+              9coin
+            </div>
+            <div class="price">
+              61.26
+            </div>
+            <div class="change -positive">
+              3.02%
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
