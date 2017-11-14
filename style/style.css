@@ -160,11 +160,13 @@ body > main {
 
 .section-purchase,
 .section-followup {
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100%;
+  margin: 0;
 }
 
 @media (min-width: 961px) {
@@ -172,4 +174,21 @@ body > main {
   .section-followup {
     width: 50%;
   }
+}
+
+.coin-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.coin-list {
+  background-color: gold;
+}
+
+.section-followup {
+  background-color: red;
+}
+
+.section-purchase {
+  background-color: green;
 }
