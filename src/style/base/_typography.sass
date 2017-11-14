@@ -17,7 +17,8 @@ pre
 h1,
 h2,
 h3,
-h4
+h4,
+h5
   font-weight: 700
   font-family: $font-family-headings
 
@@ -54,5 +55,15 @@ h4
   +media-mediumup
     line-height: $line-height-base
     font-size: $font-size-base
+  * + &
+    margin-top: $space-centi
+
+h5
+  font-weight: 500
+  line-height: $line-height-mili
+  font-size: $font-size-mili
+  +media-mediumup
+    line-height: $line-height-centi
+    font-size: $font-size-centi
   * + &
     margin-top: $space-centi

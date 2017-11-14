@@ -1,3 +1,29 @@
 .coin-item
   display: flex
   flex-direction: row
+  padding: $space-mili $space-base
+  margin: 0
+  &:nth-child(2n)
+    background-color: rgba(#000, 0.05)
+  > *
+    width: calc(100% / 3)
+    margin: 0
+    line-height: $line-height-mili
+    font-size: $font-size-mili
+    +media-mediumup
+      line-height: $line-height-centi
+      font-size: $font-size-centi
+  > .change,
+  > .price
+    text-align: right
+    &.-positive
+      color: $color-positive
+    &.-negative
+      color: $color-negative
+  &.-head
+    > *
+      line-height: $line-height-mili
+      font-size: $font-size-micro
+      font-weight: 600
+      text-transform: uppercase
+      letter-spacing: 0.06em

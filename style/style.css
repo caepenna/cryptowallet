@@ -47,7 +47,8 @@ pre {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-weight: 700;
   font-family: "Raleway", Helvetica, monospace;
 }
@@ -116,8 +117,25 @@ h4 {
   margin-top: 1rem;
 }
 
+h5 {
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 961px) {
+  h5 {
+    line-height: 2rem;
+    font-size: 1rem;
+  }
+}
+
+* + h5 {
+  margin-top: 1rem;
+}
+
 ::selection {
-  background-color: rgba(255, 192, 203, 0.4);
+  background-color: #36c;
 }
 
 html {
@@ -165,30 +183,121 @@ body > main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
   margin: 0;
+  padding: 4.5rem 1rem;
 }
 
 @media (min-width: 961px) {
   .section-purchase,
   .section-followup {
+    padding: 1.5rem;
+    min-height: 100%;
     width: 50%;
+  }
+}
+
+.cw-button {
+  padding: 1rem;
+  background-color: #f2f2f2;
+  color: #000;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: all 0.1s ease;
+}
+
+.cw-button:hover {
+  transform: translateY(-2px);
+  background-color: #fff;
+}
+
+.cw-button:active {
+  transform: translateY(0);
+  opacity: 0.8;
+}
+
+@media (min-width: 961px) {
+  .cw-button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
   }
 }
 
 .coin-item {
   display: flex;
   flex-direction: row;
+  padding: 0.5rem 2rem;
+  margin: 0;
+}
+
+.coin-item:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.coin-item > * {
+  width: calc(100% / 3);
+  margin: 0;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 961px) {
+  .coin-item > * {
+    line-height: 2rem;
+    font-size: 1rem;
+  }
+}
+
+.coin-item > .change,
+.coin-item > .price {
+  text-align: right;
+}
+
+.coin-item > .change.-positive,
+.coin-item > .price.-positive {
+  color: #3c6;
+}
+
+.coin-item > .change.-negative,
+.coin-item > .price.-negative {
+  color: #c36;
+}
+
+.coin-item.-head > * {
+  line-height: 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .coin-list {
-  background-color: gold;
+  background-color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 32rem;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .section-followup {
-  background-color: red;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  color: #1a1a1a;
+}
+
+.section-followup > .title {
+  color: #bfbfbf;
 }
 
 .section-purchase {
-  background-color: green;
+  background-color: #0d0d0d;
+  color: #d9d9d9;
+}
+
+.section-purchase > .title {
+  color: #262626;
 }
