@@ -46,7 +46,8 @@ pre {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 700;
   font-family: "Raleway", Helvetica, monospace;
 }
@@ -99,6 +100,22 @@ h3 {
   margin-top: 2rem;
 }
 
+h4 {
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 961px) {
+  h4 {
+    line-height: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+* + h4 {
+  margin-top: 1rem;
+}
+
 ::selection {
   background-color: rgba(255, 192, 203, 0.4);
 }
@@ -128,4 +145,31 @@ button {
 body,
 body > * {
   margin: 0;
+}
+
+body > main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 961px) {
+  body > main {
+    flex-direction: row;
+  }
+}
+
+.section-purchase,
+.section-followup {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 961px) {
+  .section-purchase,
+  .section-followup {
+    width: 50%;
+  }
 }
