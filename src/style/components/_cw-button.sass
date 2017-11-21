@@ -1,19 +1,17 @@
 .cw-button
-  padding: $space-centi
-  background-color: hsl(0, 0, 95%)
-  color: #000
+  padding: $space-centi $space-base
+  background-color: $color-brand-dark
+  color: #fff
   border-radius: 4px
-  box-shadow: 0 4px 12px rgba(#000, 0.2)
   font-weight: 700
   font-size: $font-size-mili
   text-transform: uppercase
   letter-spacing: 0.06em
   transition: all 0.1s ease
+  border-bottom: 2px solid mix(#000, $color-brand-dark, 10%)
   &:hover
-    transform: translateY(-2px)
-    background-color: #fff
+    background-color: mix(#000, $color-brand-dark, 10%)
   &:active
-    transform: translateY(0)
     opacity: 0.8
   +media-mediumup
     font-size: $font-size-centi

@@ -12,7 +12,9 @@ body > main > section
   justify-content: center
   margin: 0
   padding: $space-hecto $space-centi
+  > .title
+    margin-bottom: $space-base
   +media-mediumup
     padding: $space-deci
-    min-height: 100%
+    min-height: calc(100% - #{$header-height})
     width: 50%
