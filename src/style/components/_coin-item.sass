@@ -1,10 +1,13 @@
 .coin-item
   display: flex
   flex-direction: row
-  padding: $space-mili $space-base
+  padding: $space-mili
+  +media-mediumup
+    padding-left: $space-base
+    padding-right: $space-base
   margin: 0
   &:nth-child(2n)
-    background-color: rgba(#000, 0.05)
+    background-color: rgba(#000, 0.03)
   > *
     width: calc(100% / 3)
     margin: 0
@@ -13,6 +16,8 @@
     +media-mediumup
       line-height: $line-height-centi
       font-size: $font-size-centi
+  > .name
+    text-align: left
   > .change,
   > .price
     text-align: right

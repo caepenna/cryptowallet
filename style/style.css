@@ -133,7 +133,7 @@ h5 {
 }
 
 ::selection {
-  background-color: #215297;
+  background-color: #F8D117;
 }
 
 html {
@@ -227,21 +227,71 @@ body > main > section > .title {
 .cw-header {
   height: 4.5rem;
   background-color: gold;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 961px) {
+  .cw-header {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
 }
 
 .cw-header * {
   margin: 0;
 }
 
+.cw-header > .logo {
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../assets/images/bb.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #215297;
+}
+
+.cw-header > .profile {
+  display: flex;
+  align-items: center;
+}
+
+.cw-header > .profile > .name {
+  color: #215297;
+}
+
+.cw-header > .profile > .avatar {
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  height: 2.25rem;
+  width: 2.25rem;
+  border: 1px solid #215297;
+  background-image: url("../assets/images/user.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .coin-item {
   display: flex;
   flex-direction: row;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem;
   margin: 0;
 }
 
+@media (min-width: 961px) {
+  .coin-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .coin-item:nth-child(2n) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .coin-item > * {
@@ -258,6 +308,10 @@ body > main > section > .title {
   }
 }
 
+.coin-item > .name {
+  text-align: left;
+}
+
 .coin-item > .change,
 .coin-item > .price {
   text-align: right;
@@ -265,12 +319,12 @@ body > main > section > .title {
 
 .coin-item > .change.-positive,
 .coin-item > .price.-positive {
-  color: #3c6;
+  color: #2b5;
 }
 
 .coin-item > .change.-negative,
 .coin-item > .price.-negative {
-  color: #c36;
+  color: #c24;
 }
 
 .coin-item.-head > * {
@@ -311,4 +365,81 @@ body > main > section > .title {
 
 .section-purchase > .title {
   color: #215297;
+}
+
+.section-purchase > .select {
+  text-indent: 1rem;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.03);
+  height: 3rem;
+  width: 12rem;
+}
+
+.input-box {
+  width: 12rem;
+  position: relative;
+  height: 4rem;
+}
+
+.input-box * {
+  margin-top: 0;
+}
+
+.input-box > .field {
+  width: 100%;
+  height: 3rem;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.03);
+  line-height: 3rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 0 #215297;
+  transition: none;
+}
+
+.input-box > .field:focus {
+  background-color: #fff;
+  border: 1px solid #215297;
+  box-shadow: 0 0 0 6px transparent;
+  transition: box-shadow 0.4s ease;
+}
+
+.input-box > .label {
+  width: 100%;
+  position: absolute;
+  top: calc(50% - (1rem / 8));
+  left: 0;
+  font-size: 10px;
+  line-height: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  color: #215297;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.input-box > .field:focus ~ .label,
+.input-box.-filled .label,
+.input-box.-locked .label {
+  -webkit-transform: translate3d(0, -2rem, 0);
+  -moz-transform: translate3d(0, -2rem, 0);
+  transform: translate3d(0, -2rem, 0);
+}
+
+.input-box.-error > .field {
+  border: 1px solid #c24;
+}
+
+.input-box.-error > .label {
+  color: #c24;
+}
+
+.input-box.-locked > .field {
+  color: #215297;
+  pointer-events: none;
 }

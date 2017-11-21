@@ -1,0 +1,75 @@
+.input-box
+  $color-error: $color-negative
+  $height: 3rem
+  $height-extra: 1rem
+
+  width: 12rem
+  position: relative
+
+  height: $height + $height-extra
+
+  *
+    margin-top: 0
+
+  > .field
+    width: 100%
+    height: $height
+
+    display: block
+    position: relative
+
+    border-radius: 4px
+    background-color: rgba(#000, 0.03)
+    
+    line-height: $height
+    margin-top: $height-extra
+    font-size: 1rem
+    text-align: center
+    
+    box-shadow: 0 0 $color-brand-dark
+    
+    transition: none
+
+
+    &:focus
+      background-color: #fff
+      border: 1px solid $color-brand-dark
+      box-shadow: 0 0 0 6px transparent
+      transition: box-shadow 0.4s ease
+
+  > .label
+    width: 100%
+
+    position: absolute
+    top: calc(50% - (#{$height-extra} / 8))
+    left: 0
+
+    font-size: 10px
+    line-height: $height-extra
+    letter-spacing: 0.1rem
+    text-transform: uppercase
+    text-align: center
+    font-weight: 500
+    color: $color-brand-dark
+    
+    pointer-events: none
+    
+    transition: all 0.2s ease
+  
+  > .field:focus ~ .label,
+  &.-filled .label,
+  &.-locked .label
+    -webkit-transform: translate3d(0, -$height-extra*2, 0)
+    -moz-transform: translate3d(0, -$height-extra*2, 0)
+    transform: translate3d(0, -$height-extra*2, 0)
+
+  &.-error
+    > .field
+      border: 1px solid $color-error
+    > .label
+      color: $color-error
+
+  &.-locked
+    > .field
+      color: $color-brand-dark
+      pointer-events: none

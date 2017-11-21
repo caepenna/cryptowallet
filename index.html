@@ -20,7 +20,9 @@
     <header class="cw-header">
       <div class="logo"></div>
       <div class="profile">
-        <div class="name"></div>
+        <div class="name">
+          Norrin Radd
+        </div>
         <div class="avatar"></div>
       </div>
     </header>
@@ -32,7 +34,7 @@
         <h5>
           Escolha uma criptomoeda para comprar
         </h5>
-        <select>
+        <select class="select">
           <option>
             Rolecoin
           </option>
@@ -46,10 +48,9 @@
             9coin
           </option>
         </select>
-        <h5>
-          Quanto? (em R$)
-        </h5>
-        <input placeholder="0.00" type="text" />
+        <div class="input-box">
+          <input class="field js-input" id="input-1" name="input-1" type="text" /><label class="label" for="input-1">Quanto? (em R$)</label>
+        </div>
         <h4>
           <em>0.00</em> Rolecoins.
         </h4>
@@ -118,5 +119,7 @@
         </ul>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

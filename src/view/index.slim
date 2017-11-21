@@ -24,7 +24,7 @@ html
     header.cw-header
       .logo
       .profile
-        .name
+        .name Norrin Radd
         .avatar
 
     main
@@ -32,13 +32,14 @@ html
       section.section-purchase
         h1.title Compre
         h5 Escolha uma criptomoeda para comprar
-        select
+        select.select
           option Rolecoin
           option Bitcoin
           option Memecoin
           option 9coin
-        h5 Quanto? (em R$)
-        input type="text" placeholder="0.00"
+        .input-box
+          input.field.js-input type="text" id="input-1" name="input-1"
+          label.label for="input-1" Quanto? (em R$)
         h4 <em>0.00</em> Rolecoins.
         button.cw-button Comprar
 
@@ -65,3 +66,6 @@ html
             .name 9coin
             .price 161.26
             .change.-positive 3.02%
+
+    script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    script src="js/scripts.js"

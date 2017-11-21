@@ -1,5 +1,38 @@
 .cw-header
   height: $header-height
   background-color: gold
+  display: flex
+  justify-content: space-between
+  padding-left: $space-centi
+  padding-right: $space-centi
+  align-items: center
+  +media-mediumup
+    padding-left: $space-hecto
+    padding-right: $space-hecto
   *
     margin: 0
+
+  > .logo
+    width: $space-deca
+    height: $space-deca
+    background-image: url("../assets/images/bb.png")
+    background-size: 100%
+    background-repeat: no-repeat
+    background-position: center
+    border: 1px solid $color-brand-dark
+  
+  > .profile
+    display: flex
+    align-items: center
+    > .name
+      color: $color-brand-dark
+    > .avatar
+      margin-left: $space-mili
+      border-radius: 50%
+      height: $header-height / 2
+      width: $header-height / 2
+      border: 1px solid $color-brand-dark
+      background-image: url("../assets/images/user.jpg")
+      background-size: 100%
+      background-repeat: no-repeat
+      background-position: center
