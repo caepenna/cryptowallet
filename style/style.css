@@ -368,6 +368,7 @@ body > main > section > .title {
 }
 
 .section-purchase > .select {
+  -webkit-appearance: none;
   text-indent: 1rem;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.03);
